@@ -136,7 +136,7 @@ def training_recogniser():
     for lable in labels:
         print lable
 
-    face_recognizer = cv2.createLBPHFaceRecognizer()
+    face_recognizer = cv2.LBPHFaceRecognizer_create()
     face_recognizer.train(faces, np.array(labels))
     print "Recognizer trainedd$$"
     return face_recognizer
